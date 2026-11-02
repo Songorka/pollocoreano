@@ -1,0 +1,55 @@
+@import url('/fuentes/fuentes.css');
+:root{--tinta:#000;--papel:#fff;--amarillo:#FFE500;--rosa:#E0115F;--azul:#0B3FC4;--borde:5px solid #000}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--papel);color:var(--tinta);font:400 20px/1.5 'Comic Neue','Comic Sans MS',sans-serif}
+.pagina{max-width:1240px;margin:0 auto;padding:16px clamp(16px,3vw,32px) 48px}
+a{color:var(--azul);font-weight:700}a:hover{color:var(--rosa)}
+:focus-visible{outline:4px solid var(--rosa);outline-offset:3px}
+h1,h2,h3{font-family:'Bangers','Comic Neue',sans-serif;font-weight:400;letter-spacing:.04em;line-height:1.05;margin:0}
+h1{font-size:clamp(52px,10vw,132px)}
+h2{font-size:clamp(36px,5vw,56px)}
+h3{font-size:34px}
+p{margin:0 0 .7em;max-width:38em}p:last-child{margin-bottom:0}
+.cabecera{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding-bottom:16px}
+.marca{display:flex;align-items:center;gap:10px;color:#000;text-decoration:none;font:400 32px/1 'Bangers',sans-serif;letter-spacing:.04em}
+.marca img{width:56px;height:56px}
+.cabecera nav{display:flex;flex-wrap:wrap;gap:4px 20px}
+.cabecera nav a{color:#000;padding:10px 0;font-size:20px}
+.cabecera nav a[aria-current]{color:var(--rosa)}
+.portada{position:relative;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:16px;align-items:center;border:var(--borde);padding:clamp(20px,4vw,44px);background-color:var(--amarillo);background-image:radial-gradient(#00000022 2px,transparent 2.5px);background-size:12px 12px;margin-bottom:16px}
+.portada img{width:100%;max-width:360px;justify-self:center;height:auto}
+.portada .intro{font-size:23px;font-weight:700;margin-top:18px}
+.bum{font:400 clamp(44px,6vw,76px)/1 'Jua',sans-serif;color:var(--rosa);transform:rotate(-6deg);display:inline-block;margin-bottom:8px;-webkit-text-stroke:0}
+.vinetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px;margin-bottom:16px}
+.vineta{border:var(--borde);padding:20px;background:#fff}
+.vineta h3,.vineta h2{margin-bottom:8px}
+.amarilla{background:var(--amarillo)}
+.rosa{background:var(--rosa);color:#fff}.rosa a{color:#fff}
+.azul{background:var(--azul);color:#fff}.azul a{color:#fff}.azul a:hover,.rosa a:hover{color:var(--amarillo)}
+.ancha{grid-column:1/-1}
+.titular{margin:32px 0 14px}
+.grande{font-size:23px;font-weight:700}
+.bocadillo{position:relative;border:4px solid #000;border-radius:28px;background:#fff;color:#000;padding:14px 20px;font-weight:700;margin:12px 0 22px;max-width:30em}
+.bocadillo::after{content:"";position:absolute;left:44px;bottom:-20px;width:26px;height:20px;background:#fff;border:4px solid #000;border-top:0;border-right:0;transform:skewX(32deg);border-bottom-left-radius:4px}
+.tipo{font:400 30px/1.1 'Jua',sans-serif;color:var(--rosa);display:block;margin-bottom:2px}
+.rosa .tipo,.azul .tipo{color:var(--amarillo)}
+.vineta .boton,.boton{display:inline-block;min-height:44px;padding:9px 18px;border:4px solid #000;background:var(--amarillo);color:#000;font-weight:700;text-decoration:none;box-shadow:5px 5px 0 #000;margin:8px 8px 0 0}
+.vineta .boton:hover,.boton:hover{color:#000;background:#fff}
+.boton:active{transform:translate(5px,5px);box-shadow:none}
+.dato{font-size:18px}
+.local h3{margin-bottom:2px}
+.local address{font-style:normal;font-weight:700;margin-bottom:8px}
+.fuente{font-size:17px;margin-top:10px}
+ol.pasos{list-style:none;counter-reset:p;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(270px,100%),1fr));gap:16px}
+ol.pasos>li{counter-increment:p;border:var(--borde);padding:52px 18px 18px;position:relative;background:#fff}
+ol.pasos>li::before{content:counter(p);position:absolute;top:-5px;left:-5px;width:46px;height:46px;background:#000;color:var(--amarillo);display:grid;place-items:center;font:400 30px/1 'Bangers',sans-serif}
+ul.ingredientes{margin:0;padding-left:22px}
+.receta{margin-bottom:40px;scroll-margin-top:12px}
+.receta .vinetas{margin:14px 0 16px}
+.indice{display:flex;flex-wrap:wrap;gap:0 4px;margin-bottom:24px}
+.pie{border:var(--borde);padding:20px;margin-top:24px;background-color:#fff;font-size:18px}
+.pie .venta{font-size:21px;font-weight:700}
+.legal h2{font-size:34px;margin:26px 0 8px}
+@media (max-width:720px){body{font-size:19px}.portada{grid-template-columns:1fr}.portada img{max-width:210px;grid-row:1}.marca{font-size:28px}}
