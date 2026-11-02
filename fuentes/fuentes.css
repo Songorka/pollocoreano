@@ -2,9 +2,11 @@
 @font-face{font-family:'Comic Neue';src:url('/fuentes/comic-neue-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
 @font-face{font-family:'Comic Neue';src:url('/fuentes/comic-neue-latin-700-normal.woff2') format('woff2');font-weight:700;font-display:swap}
 @font-face{font-family:'Jua';src:url('/fuentes/jua-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
-@font-face{font-family:'Jua';src:url('/fuentes/jua-113-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+B150,U+D0A8,U+B9E5}
-@font-face{font-family:'Jua';src:url('/fuentes/jua-118-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+CE58,U+AC04,U+B77C,U+B4DC,U+C7A5,U+C8FC,U+BC14,U+BB34}
-@font-face{font-family:'Jua';src:url('/fuentes/jua-110-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+B2ED}
-@font-face{font-family:'Jua';src:url('/fuentes/jua-119-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+C774}
-@font-face{font-family:'Jua';src:url('/fuentes/jua-117-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+D30C,U+D6C4,U+C591}
+@font-face{font-family:'Jua';src:url('/fuentes/jua-119-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+C774,U+ACE0}
+@font-face{font-family:'Jua';src:url('/fuentes/jua-117-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+BC30,U+B9E4,U+C591,U+D30C,U+D6C4}
+@font-face{font-family:'Jua';src:url('/fuentes/jua-118-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+B77C,U+C548,U+C7A5,U+B9C8,U+BC14,U+CE58,U+C8FC,U+AC04,U+B4DC,U+BB34,U+C5B4,U+C788}
+@font-face{font-family:'Jua';src:url('/fuentes/jua-116-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+C6CC,U+B610,U+B54C}
+@font-face{font-family:'Jua';src:url('/fuentes/jua-113-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+B155,U+D0A8,U+B9E5,U+BD10,U+B150}
 @font-face{font-family:'Jua';src:url('/fuentes/jua-115-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+C0AD}
+@font-face{font-family:'Jua';src:url('/fuentes/jua-114-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+B9DB}
+@font-face{font-family:'Jua';src:url('/fuentes/jua-110-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+B2ED}

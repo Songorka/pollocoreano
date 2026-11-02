@@ -58,3 +58,68 @@ ul.ingredientes{margin:0;padding-left:22px}
 .aviso-cookies p{margin:0 0 6px}
 .enlace-boton{cursor:pointer}
 button.boton{font:700 19px 'Comic Neue','Comic Sans MS',sans-serif;cursor:pointer}
+
+/* Logo vivo */
+.marca svg{width:56px;height:56px;flex:none}
+.logo-vivo{display:block;overflow:visible}
+.logo-hero{all:unset;cursor:pointer;width:100%;max-width:360px;justify-self:center;display:block}
+.logo-hero:focus-visible{outline:4px solid var(--rosa);outline-offset:3px}
+.logo-hero svg{width:100%;height:auto}
+.ojo-cerrado{opacity:0}
+@media (prefers-reduced-motion:no-preference){
+  .logo-hero{animation:cae .9s cubic-bezier(.3,1.4,.5,1) both}
+  .logo-hero.salta{animation:salta .6s ease-out}
+  .ojo-abierto{animation:guino-a 6s steps(1) infinite}
+  .ojo-cerrado{animation:guino-c 6s steps(1) infinite}
+  .lengua{transform-box:fill-box;transform-origin:top center;animation:lengua 6s ease-in-out infinite}
+}
+@keyframes cae{0%{transform:translateY(-120%) rotate(-25deg);opacity:0}60%{transform:translateY(0) rotate(8deg);opacity:1}80%{transform:translateY(-22px) rotate(-3deg)}100%{transform:none}}
+@keyframes salta{30%{transform:translateY(-34px) rotate(-8deg)}60%{transform:translateY(0) rotate(4deg)}80%{transform:translateY(-8px)}}
+@keyframes guino-a{0%,88%,96%,100%{opacity:1}89%,95%{opacity:0}}
+@keyframes guino-c{0%,88%,96%,100%{opacity:0}89%,95%{opacity:1}}
+@keyframes lengua{0%,86%,100%{transform:scaleY(1)}90%,94%{transform:scaleY(1.45) rotate(6deg)}}
+
+/* Pollo */
+.pollo{position:absolute;left:0;top:0;z-index:5;width:76px;pointer-events:none}
+.pollo[hidden]{display:none}
+.pollo.paseante{position:fixed;top:auto;bottom:8px}
+.pollo.actor{transition:left .55s cubic-bezier(.4,0,.4,1),top .55s cubic-bezier(.4,0,.4,1)}
+.pollo-cuerpo{all:unset;display:block;width:76px;cursor:pointer;pointer-events:auto;-webkit-tap-highlight-color:transparent}
+.pollo-cuerpo:focus-visible{outline:4px solid var(--rosa);outline-offset:2px}
+.pollo svg{display:block;width:100%;height:auto;overflow:visible}
+.pollo.izquierda svg{transform:scaleX(-1)}
+.prop{display:none}
+.pollo[data-prop=casco] .prop-casco,.pollo[data-prop=sudor] .prop-sudor,.pollo[data-prop=cerveza] .prop-cerveza{display:block}
+.tronco,.pata,.ala{transform-box:fill-box}
+.pata{transform-origin:top center}.tronco{transform-origin:bottom center}.ala{transform-origin:top right}
+.bocadillo-pollo{position:absolute;bottom:calc(100% + 12px);right:0;width:max-content;max-width:min(240px,70vw);background:#fff;border:4px solid #000;border-radius:20px;padding:7px 14px;box-shadow:4px 4px 0 #000;pointer-events:none;text-align:center}
+.bocadillo-pollo[hidden]{display:none}
+.bocadillo-pollo.a-la-derecha{right:auto;left:0}
+.bocadillo-pollo::after{content:"";position:absolute;bottom:-14px;right:22px;width:18px;height:14px;background:#fff;border:4px solid #000;border-top:0;border-left:0;transform:skewX(-30deg)}
+.bocadillo-pollo.a-la-derecha::after{right:auto;left:22px;border-right:0;border-left:4px solid #000;transform:skewX(30deg)}
+.bocadillo-pollo .ko{display:block;font:400 26px/1.1 'Jua',sans-serif;color:var(--rosa)}
+.bocadillo-pollo .es{display:block;font-size:15px;line-height:1.2;font-weight:700;color:#000}
+.pluma,.sesamo{position:fixed;z-index:6;pointer-events:none;animation:vuela 1.1s ease-out forwards}
+.pluma{width:16px;height:9px;background:#FFE27A;border:2px solid #000;border-radius:80% 10%}
+.sesamo{width:11px;height:7px;background:#FFFDF0;border:2px solid #000;border-radius:50%}
+@keyframes vuela{0%{transform:none;opacity:1}30%{transform:translate(calc(var(--dx)*.5),-50px) rotate(calc(var(--giro)*.4))}100%{transform:translate(var(--dx),var(--dy)) rotate(var(--giro));opacity:0}}
+@media (prefers-reduced-motion:no-preference){
+  .tronco{animation:respira 2.4s ease-in-out infinite}
+  .pollo.anda .pata1{animation:paso .42s ease-in-out infinite alternate}
+  .pollo.anda .pata2{animation:paso .42s ease-in-out infinite alternate-reverse}
+  .pollo.anda .tronco{animation:vaiven .42s ease-in-out infinite alternate}
+  .pollo.picotea .tronco{animation:picotea .9s ease-in-out infinite}
+  .pollo.salto .tronco,.pollo.salto .patas{animation:salto-pollo .55s ease-out}
+  .pollo.brinca .pollo-cuerpo{animation:brinca .5s ease-out}
+  .bocadillo-pollo.sale{animation:sale .3s cubic-bezier(.3,1.6,.5,1)}
+}
+@keyframes respira{50%{transform:scaleY(.965)}}
+@keyframes paso{from{transform:rotate(-20deg)}to{transform:rotate(20deg)}}
+@keyframes vaiven{from{transform:rotate(-3deg)}to{transform:rotate(3deg) translateY(-2px)}}
+@keyframes picotea{0%,100%{transform:none}40%,60%{transform:rotate(26deg) translateY(10px)}}
+@keyframes salto-pollo{40%{transform:translateY(-46px) scaleY(1.06)}80%{transform:scaleY(.86)}}
+@keyframes brinca{40%{transform:translateY(-24px) rotate(-8deg)}}
+@keyframes sale{from{transform:scale(.4);opacity:0}}
+.interruptor{all:unset;cursor:pointer;color:var(--azul);font-weight:700;text-decoration:underline}
+.interruptor:hover{color:var(--rosa)}.interruptor:focus-visible{outline:4px solid var(--rosa);outline-offset:3px}
+@media (max-width:720px){.pollo,.pollo-cuerpo{width:58px}.logo-hero{max-width:210px;grid-row:1}.bocadillo-pollo .ko{font-size:22px}.bocadillo-pollo .es{font-size:14px}}
