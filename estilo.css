@@ -53,3 +53,8 @@ ul.ingredientes{margin:0;padding-left:22px}
 .pie .venta{font-size:21px;font-weight:700}
 .legal h2{font-size:34px;margin:26px 0 8px}
 @media (max-width:720px){body{font-size:19px}.portada{grid-template-columns:1fr}.portada img{max-width:210px;grid-row:1}.marca{font-size:28px}}
+.aviso-cookies{position:fixed;left:12px;right:12px;bottom:12px;z-index:10;max-width:620px;margin:0 auto;background:#fff;border:var(--borde);box-shadow:7px 7px 0 #000;padding:16px 18px;font-size:18px}
+.aviso-cookies[hidden]{display:none}
+.aviso-cookies p{margin:0 0 6px}
+.enlace-boton{cursor:pointer}
+button.boton{font:700 19px 'Comic Neue','Comic Sans MS',sans-serif;cursor:pointer}
